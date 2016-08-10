@@ -34,28 +34,35 @@ function testMath(value) {
 console.log(testMath(test));
 */
 function buildTree(value) {
-	widthTree = (value.height * 2) - 1; 
+	//widthTree = (value.height * 2) - 1; 
 	//console.log("widthTree", widthTree);
 	for (var i = 0; i < value.height; i++) {
 		charTree = (i * 2) + 1;
 		//console.log("charTree", charTree);
-		spaceTree = (widthTree - charTree)/2;
+		finalTree = value.char;
+	
+	for (var l = value.height; l > 0; --l) {
+		spaceTree = value.height - l;
+		//console.log("spaceTree", spaceTree);
+		
+	}
 		//console.log("spaceTree", spaceTree);
 		//var rowTree = spaceTree + charTree;
 		//console.log("rowTree", rowTree);
-		
+		/*
 		for (var k = 0; k <spaceTree * value.char; k++) {
-			finalTree += "\n";
+			f
 			//console.log(finalTree);
 		}
 		for (var j = 0; j < charTree; j++) {
-			finalTree += value.char;
 			
-		}
+			
+		}*/
 		
-	finalTree += "\n"
+	//finalTree += "\n"
+	console.log("finalTree", " ".repeat(spaceTree) + finalTree.repeat(charTree));
 	}	
-	console.log(finalTree);
+
 }  
 
 	/*
