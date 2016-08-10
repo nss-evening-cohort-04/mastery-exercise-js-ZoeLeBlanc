@@ -43,17 +43,19 @@ function buildTree(value) {
 		//console.log("spaceTree", spaceTree);
 		//var rowTree = spaceTree + charTree;
 		//console.log("rowTree", rowTree);
-		/*for (var k = spaceTree; k > 0; --k) {
-			finalTree += "&nbsp;";
-		}*/
-		for (var j = 0; j < charTree; j++) {
-			finalTree = charTree.valueOf();
-			finalTree += value.char;
-			console.log(finalTree);
+		
+		for (var k = 0; k <spaceTree * value.char; k++) {
+			finalTree += "\n";
+			//console.log(finalTree);
 		}
-	
+		for (var j = 0; j < charTree; j++) {
+			finalTree += value.char;
+			
+		}
+		
+	finalTree += "\n"
 	}	
-
+	console.log(finalTree);
 }  
 
 	/*
