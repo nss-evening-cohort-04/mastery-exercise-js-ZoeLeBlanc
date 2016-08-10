@@ -4,7 +4,7 @@ var buildTreeBtn = document.getElementById("buildTree");
 var treeObj = "";
 var widthTree = "";
 var spaceTree = "";
-
+var finalTree = "";
 function getInputs() {
 	var treeObj = {
 		height: treeHeight.value * 1,
@@ -35,18 +35,24 @@ console.log(testMath(test));
 */
 function buildTree(value) {
 	widthTree = (value.height * 2) - 1; 
-	console.log("widthTree", widthTree);
+	//console.log("widthTree", widthTree);
 	for (var i = 0; i < value.height; i++) {
 		charTree = (i * 2) + 1;
-		console.log("charTree", charTree);
-	for (var j = value.height; j > 0; --j) {
-			spaceTree = j - 1;
-			console.log("spaceTree", spaceTree);
-	}
+		//console.log("charTree", charTree);
+		spaceTree = (widthTree - charTree)/2;
+		//console.log("spaceTree", spaceTree);
+		//var rowTree = spaceTree + charTree;
+		//console.log("rowTree", rowTree);
+		for (var k = spaceTree; k > 0; --k) {
+			finalTree += " ";
+		}
+		for (var j = 0; i < charTree; i++) {
+			finalTree += value.char;
+			console.log(finalTree);
+		}
 	
-		var rowTree = spaceTree + charTree;
-		console.log("rowTree", rowTree);
-	}
+	}	
+
 }  
 
 	/*
@@ -88,13 +94,4 @@ function stackLetters() {
 	}
      
 }
-function generatePyramid() {
-    var totalNumberofRows = 5;
-    var output="";
-    for (var i = 1; i <= totalNumberofRows; i++) {
-      for (var j = 1; j <= i; j++) {
-        output+=j + "     ";
-  }
-  console.log(output);
-      output="";
 */

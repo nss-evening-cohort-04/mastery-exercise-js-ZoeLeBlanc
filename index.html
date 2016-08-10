@@ -8,10 +8,10 @@
 </head>
 <body>
 <div>
-    <input type="text" style="width: 40%" id="treeHeight" placeholder="How tall should the tree be?">
+    <input type="text" style="width: 40%" id="treeHeight" placeholder="How tall should the tree be?" onkeypress="JavaScript: if (event.keyCode === 13) getInputs();">
 </div>
 <div>
-    <input type="text" style="width: 40%" id="treeChar" placeholder="Which character should be used?">
+    <input type="text" style="width: 40%" id="treeChar" placeholder="Which character should be used?" onkeypress="JavaScript: if (event.keyCode === 13) getInputs();">
 </div>
 <button type="submit" id="buildTree">Grow your tree</button>
 <script type="text/javascript" src="quiz.js"></script>
