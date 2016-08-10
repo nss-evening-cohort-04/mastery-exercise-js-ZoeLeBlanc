@@ -5,6 +5,7 @@ var treeObj = "";
 var widthTree = "";
 var spaceTree = "";
 var finalTree = "";
+var charTree = "";
 function getInputs() {
 	var treeObj = {
 		height: treeHeight.value * 1,
@@ -34,17 +35,18 @@ function testMath(value) {
 console.log(testMath(test));
 */
 function buildTree(value) {
-	//widthTree = (value.height * 2) - 1; 
+	finalTree = value.char;
 	//console.log("widthTree", widthTree);
-	for (var i = 0; i < value.height; i++) {
-		charTree = (i * 2) + 1;
-		//console.log("charTree", charTree);
-		finalTree = value.char;
 	
 	for (var l = value.height; l > 0; --l) {
 		spaceTree = value.height - l;
 		//console.log("spaceTree", spaceTree);
+		for (var i = 0; i < value.height; i++) {
+		charTree = (i * 2) - 1;
+		//console.log("charTree", charTree);
 		
+	}
+	console.log("finalTree", " ".repeat(spaceTree) + finalTree.repeat(charTree));
 	}
 		//console.log("spaceTree", spaceTree);
 		//var rowTree = spaceTree + charTree;
@@ -60,8 +62,7 @@ function buildTree(value) {
 		}*/
 		
 	//finalTree += "\n"
-	console.log("finalTree", " ".repeat(spaceTree) + finalTree.repeat(charTree));
-	}	
+
 
 }  
 
