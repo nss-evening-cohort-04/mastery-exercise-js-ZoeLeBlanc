@@ -38,16 +38,19 @@ function buildTree(value) {
 	finalTree = value.char;
 	//console.log("widthTree", widthTree);
 	
-	for (var l = value.height; l > 0; --l) {
-		spaceTree = value.height - l;
+	//for (var l = value.height; l > 0; --l) {
+		//spaceTree = value.height - l;
 		//console.log("spaceTree", spaceTree);
 		for (var i = 0; i < value.height; i++) {
 		charTree = (i * 2) - 1;
 		//console.log("charTree", charTree);
+		spaceTree = value.height - i;
 		
+
 	}
 	console.log("finalTree", " ".repeat(spaceTree) + finalTree.repeat(charTree));
-	}
+	
+}
 		//console.log("spaceTree", spaceTree);
 		//var rowTree = spaceTree + charTree;
 		//console.log("rowTree", rowTree);
@@ -64,7 +67,7 @@ function buildTree(value) {
 	//finalTree += "\n"
 
 
-}  
+
 
 	/*
 	for (var k = value; k > 0; k++){
