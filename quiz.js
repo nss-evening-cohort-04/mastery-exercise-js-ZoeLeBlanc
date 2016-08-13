@@ -17,7 +17,7 @@ function getInputs() {
 }
 // Test Inputs to make sure numbers and symbols
 function testInputs(treeTest) {
-	if (isNaN(treeTest.height)) {
+	if (isNaN(treeTest.height) || treeTest.height === "") {
 		alert("Enter a number");
 	} else if (treeTest.char === "") {
 		alert("Enter a symbol");
