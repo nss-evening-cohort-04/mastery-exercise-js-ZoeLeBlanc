@@ -17,10 +17,8 @@ function getInputs() {
 }
 // Test Inputs to make sure numbers and symbols
 function testInputs(treeTest) {
-	if (isNaN(treeTest.height) || treeTest.height === "") {
-		alert("Enter a number");
-	} else if (treeTest.char === "") {
-		alert("Enter a symbol");
+	if ((isNaN(treeTest.height)) || (treeTest.height <= 0) || (treeTest.char === "")) {
+		alert("Missing number for tree and/or symbol for tree. Please submit"); 
 	} else {
 		buildTree(treeTest);
 	}
